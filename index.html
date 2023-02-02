@@ -8,6 +8,61 @@
     <title>Responsive Images</title>
 </head>
 <body>
-    
+    <h1>Responsive Images</h1>
+    <section>
+        <h2>Same image in different sizes</h2>
+        <img srcset="img/placeholder_320x320.png 320w,
+                    img/placeholder_640x400.png 640w,
+                    img/placeholder_1024x600.png 1024w"
+            sizes="(max-width: 320px) 320w,
+                 (max-width: 640px) 640w,
+                 (max-width: 1024px) 1024w"
+            src="img/placeholder_640x400.png"
+            alt="Placeholder Image">
+    </section>
+
+    <section>
+        <h2>Same image in different sized (min-width)</h2>
+        <img srcset="img/placeholder_320x320.png 320w,
+                    img/placeholder_640x400.png 640w,
+                    img/placeholder_1024x600png 1024w"
+                sizes="(min-width: 320px) 320w,
+                    (min-width: 640px) 640w,
+                    (min-width: 1024px) 1024w"
+                src="img/placeholder_640x400.png"
+                alt="Placeholder Image">
+    </section>
+
+    <section>
+        <h2>Same image in different resolutions</h2>
+        <img srcset="img/placeholder_320x320.png 1x,
+                    img/placeholder_640x640.png 2x,
+                    img/placeholder_960x960.png 3x"
+                src="img/placeholder_640x400.png"
+                alt="Placeholder Image"
+                class="avatar">
+    </section>
+
+    <section>
+        <h2>Different images at different screen sizes and resolutions</h2>
+        <picture>
+            <source srcset="img/fall-dog-1200.jpg 1x,
+                            img/fall-dog-2400.jpg 2x,
+                            img/fall-dog-3600.jpg 3x"
+                    media="(min-width: 1200px)">
+
+            <source srcset="img/fall-dog-900.jpg 1x,
+                            img/fall-dog-1800.jpg 2x,
+                            img/fall-dog-2700.jpg 3x"
+                    media="(min-width: 900px)">
+
+            <source srcset="img/fall-dog-640.jpg 1x,
+                            img/fall-dog-1280.jpg 2x,
+                            img/fall-dog-1920.jpg 3x"
+                    media="(min-width: 640px)">
+            <img src="img/fall-dog-640.jpg"
+            alt="Placeholder Image">
+        </picture>
+    </section>
 </body>
 </html>
